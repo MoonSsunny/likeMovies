@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #000;
+}
+
+section {
+    min-width: 1280px;
+    margin: 0 auto;
+}
+
+/* web - title 설정 */
+
+h1 {
+    margin: 60px auto;
+    text-align: center;
+}
+
+
+h1 .title {
+    font-size: 28px;
+    color: #f2cb05;
+    text-align: center;
+    font-weight: 400;
+
+}
+
+/* movie list */
+
+.movie_list {
+    display: grid;
+    grid-template-columns: repeat(5, 180px);
+    gap: 30px 30px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.movie_list > li {
+    position: relative;
+}
+
+.movie_list > li > figure {
+    margin: 0;
+    position: relative;
+}
+
+li .movie_poster {
+    width: 180px;
+    height: 260px;
+    border-radius: 8px;
+}
+
+/* movie title */
+
+li .movie_title {
+    display: block;
+    margin-top: 20px;
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    transition: color .3s ease-in;
+}
+
+li .movie_title:hover {
+
+    color: #f2cb05;
+}
+
+/* movie explanation */
+
+li .movie_explanation {
+    width: 180px;
+    height: 260px;
+    padding: 30px 10px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.781);
+    font-size: 10px;
+    letter-spacing: 0.07em;
+    line-height: 1.7;
+    color: #cdcdcd;
+    font-weight: 300;
+    overflow: auto;
+    opacity: 0;
+}
+
+li .movie_explanation:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* movie release & score */
+
+li .movie_release {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #666;
+}
+
+li .movie_score {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 35px;
+    height: 35px;
+    padding: 4px;
+    background-color: #6CC734;
+    border-radius: 8px;
+    color: #fff;
+    text-align: center;
+}
